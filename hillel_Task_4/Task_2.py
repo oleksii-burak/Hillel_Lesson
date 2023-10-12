@@ -27,5 +27,3 @@ t_result3 = t_result[2]
 print(t_result1[2])
 print(t_result2[2])
 print(t_result3[2])
-
-print("Hello")
