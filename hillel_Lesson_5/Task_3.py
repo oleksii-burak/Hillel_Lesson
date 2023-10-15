@@ -45,7 +45,6 @@ result4 = min(form0)
 result5 = par
 result6 = nepar
 
-
 # Виводимо результати
 print("+-------------Ваш результат!-------------+")
 print(f"Сума чисел: {result1}")
