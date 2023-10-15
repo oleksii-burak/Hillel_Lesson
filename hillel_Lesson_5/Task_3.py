@@ -9,14 +9,21 @@ nepar = 0
 # робтмо перевірку на введення 0 для того чоб программа почала
 # рахувати, також  робимо перевірку щоб вводились тільки цифри.
 while True:
-    numinput = int(input("Введіть число:"))
-    strnumint = str(numinput)
-    if strnumint.isdigit():
-        if numinput == 0:
+    numinput = input("Введіть число:")
+    if numinput.isdigit():
+        numint = int(numinput)
+        if numint == 0:
             break
-        form0.append(numinput)
+        form0.append(numint)
+
     else:
-        print("Ви ввели не коректний символ!")
+        if not numinput:
+            print("Ви не ввели число!")
+
+        else:
+            print("Ви ввели не коректний символ!",
+                  "Перевірте та введіть корректно:", sep = "\n"
+                  )
 
 # Підраховуємо парні та не парні числа.
 for num1 in form0:
@@ -40,6 +47,7 @@ result6 = nepar
 
 
 # Виводимо результати
+print("+-------------Ваш результат!-------------+")
 print(f"Сума чисел: {result1}")
 print(f"Середнє арифметичне: {result2}")
 print(f"Максимальне значення: {result3}")
