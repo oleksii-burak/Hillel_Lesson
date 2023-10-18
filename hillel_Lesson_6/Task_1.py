@@ -12,6 +12,8 @@ resvel60 = loan_amount / 60
 # Тут ми будемо зберігати загальну суму з відсотками.
 total_payment12 = 0
 total_payment60 = 0
+month1 = 1
+month2 = 1
 
 # Цикл для розрахунку платежів за кожний місяць на протязі одного року.
 for month0 in range(1, 13):
@@ -21,11 +23,12 @@ for month0 in range(1, 13):
     total_payment12 += resvel12 + monthly_payment12
 
     # Виводимо щомісячний платіж з врахуванням відсотків та відсотки окремо.
-    print(f"Місяць {month0}: {resvel12 + monthly_payment12:.2f}",
+    print(f"Місяць {str(month1).rjust(3)}: {resvel12 + monthly_payment12:.2f}",
         f"(Проценти: {monthly_payment12:.2f})")
 
     # Дізнаємося залишок суми для виплати за кожен місяць.
     loan_amount12 -= resvel12
+    month1 += 1
 
 # Виводимо роздиляючий рядок та загальний результат.
 print(rasdel)
@@ -45,11 +48,12 @@ for month in range(1, 61):
     total_payment60 += resvel60 + monthly_payment60
     # Виводимо щомісячний платіж з врахуванням відсотків та відсотки окремо.
     print(
-        f"Місяць {month}: {resvel60 + monthly_payment60:.2f}",
+        f"Місяць {str(month2).rjust(3)}: {resvel60 + monthly_payment60:.2f}",
         f"(Проценти: {monthly_payment60:.2f})"
     )
     # Дізнаємося залишок суми для виплати за кожен місяць.
     loan_amount -= resvel60
+    month2 += 1
 
 # Виводимо роздиляючий рядок та загальний результат
 print(rasdel)
