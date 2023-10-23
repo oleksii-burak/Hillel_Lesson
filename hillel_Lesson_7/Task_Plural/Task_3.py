@@ -12,3 +12,4 @@ for setli in test_list:
 
 # Виводимо результат.
 print(set_list)
+
