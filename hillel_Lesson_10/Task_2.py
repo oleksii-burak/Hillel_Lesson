@@ -7,15 +7,17 @@ def is_prime(num):
             return False
     return True
 
-def generate_primes(n, z):
+
+def generate_primes(nn, zz):
     """Генератор простих чисел у діапазоні від n до z."""
-    for num in range(n, z + 1):
+    for num in range(nn, zz + 1):
         if is_prime(num):
             yield num
 
-# Використання генератора
-n = 10  # Початок діапазону
-z = 50  # Кінець діапазону
 
-primes = generate_primes(n, z)
+# Використання генератора
+nn = 10  # Початок діапазону
+zz = 50  # Кінець діапазону
+
+primes = generate_primes(nn, zz)
 print(*primes)
