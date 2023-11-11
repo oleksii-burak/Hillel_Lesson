@@ -1,4 +1,9 @@
 def longest_words(filename):
+    """
+    Функція яка перевіряє в файлі текст та знаходить найдовщі слова
+    :param filename:
+    :return:
+    """
     with open(filename, 'r') as file:
         words = file.read().split()
     max_length = max(len(word) for word in words)
