@@ -16,6 +16,7 @@ def sortmatrix(matrix):
                 for k in range(M):
                     matrix[k][j], matrix[k][j+1] = matrix[k][j+1], matrix[k][j]
 
+
     # Сортування елементів у стовпцях
     for j in range(M):
         for i in range(M):
@@ -24,6 +25,7 @@ def sortmatrix(matrix):
                 if (j % 2 == 0 and matrix[k][j] > matrix[k+1][j]) or (j % 2 != 0 and matrix[k][j] < matrix[k+1][j]):
                     # Міняємо місцями елементи
                     matrix[k][j], matrix[k+1][j] = matrix[k+1][j], matrix[k][j]
+
 
 def printmatrix(matrix):
     """
@@ -38,6 +40,7 @@ def printmatrix(matrix):
     for j in range(M):
         print(f"{sum(matrix[i][j] for i in range(M)):3}", end=" ")  # Вивід суми елементів стовпця
     print()
+
 
 # Генерація матриці
 M = int(input("Введіть розмір матриці (більше 5): "))
